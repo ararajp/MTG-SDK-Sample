@@ -14,6 +14,7 @@
 		7B3BC3A12178E48500BBE140 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B3BC39F2178E48500BBE140 /* LaunchScreen.storyboard */; };
 		7B3BC3AC2178E48500BBE140 /* MTG_SDK_SampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3BC3AB2178E48500BBE140 /* MTG_SDK_SampleTests.swift */; };
 		7B3BC3B72178E48500BBE140 /* MTG_SDK_SampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3BC3B62178E48500BBE140 /* MTG_SDK_SampleUITests.swift */; };
+		7B3BC3C6217A35B800BBE140 /* MTGSDKSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B3BC3C5217A35B800BBE140 /* MTGSDKSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		7B3BC3B22178E48500BBE140 /* MTG-SDK-SampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MTG-SDK-SampleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B3BC3B62178E48500BBE140 /* MTG_SDK_SampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTG_SDK_SampleUITests.swift; sourceTree = "<group>"; };
 		7B3BC3B82178E48500BBE140 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B3BC3C5217A35B800BBE140 /* MTGSDKSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MTGSDKSwift.framework; path = Carthage/Build/iOS/MTGSDKSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B3BC3C6217A35B800BBE140 /* MTGSDKSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +84,7 @@
 				7B3BC3AA2178E48500BBE140 /* MTG-SDK-SampleTests */,
 				7B3BC3B52178E48500BBE140 /* MTG-SDK-SampleUITests */,
 				7B3BC3942178E48400BBE140 /* Products */,
+				7B3BC3C4217A35B800BBE140 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +129,14 @@
 			path = "MTG-SDK-SampleUITests";
 			sourceTree = "<group>";
 		};
+		7B3BC3C4217A35B800BBE140 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7B3BC3C5217A35B800BBE140 /* MTGSDKSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +147,7 @@
 				7B3BC38F2178E48400BBE140 /* Sources */,
 				7B3BC3902178E48400BBE140 /* Frameworks */,
 				7B3BC3912178E48400BBE140 /* Resources */,
+				7B3BC3C7217A450600BBE140 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -250,6 +263,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7B3BC3C7217A450600BBE140 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/MTGSDKSwift.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7B3BC38F2178E48400BBE140 /* Sources */ = {
@@ -434,6 +468,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SH8DN25MCG;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "MTG-SDK-Sample/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -452,6 +490,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SH8DN25MCG;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "MTG-SDK-Sample/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
