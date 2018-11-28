@@ -1,1 +1,2 @@
 github "MagicTheGathering/mtg-sdk-swift" ~> 0.1
+github "kean/Nuke" ~> 7.0

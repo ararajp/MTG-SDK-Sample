@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  TopViewController.swift
 //  MTG-SDK-Sample
 //
 //  Created by Yusuke Arai on 2018/10/19.
